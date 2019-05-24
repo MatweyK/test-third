@@ -1,0 +1,488 @@
+@import "fonts.scss";
+@import "variables.scss";
+
+
+
+
+
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 980px;
+  padding: 0 10px;
+  margin: 0 auto ;
+}
+
+//header start here
+header {
+  padding: 65px 0;
+  background-color: $light-grey;
+  color: $dark-grey;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 28%;
+  display: flex;
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  p {
+    margin: 0;
+
+  }
+}
+.logo-info {
+  margin-left: 15px;
+}
+.logo-img-wrapper img {
+  width: 100px;
+  height: 100px;
+  background-color: $dark-grey;
+}
+
+.phone {
+  margin-left: auto;
+  width: 42.1%;
+  p {
+    text-align: right;
+    font-weight: 300;
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: 46px;
+  }
+  a {
+    float: right;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 46px;
+    color: $dark-grey;
+    border-bottom: 2px dashed $dark-grey;
+  }
+}
+
+//header ends here
+
+
+//main starts here
+
+main {
+
+  font-size: 14px;
+  color: #777777;
+}
+
+.main-nav {
+  padding: 25px;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+
+    }
+    li a{
+      padding-right: 22px;
+      border-right: 2px solid white;
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-weight: 400;
+      text-align: center;
+      color: $whitefff;
+    }
+    //dont understand why not working about last child
+    //li : last-child a {
+    //   border-right: none;
+    //
+    //}
+}
+
+.main-nav-item-active {
+  text-decoration: underline;
+}
+
+.navigation {
+  font-size: 14px;
+  background-color: #777777;
+}
+
+.slider {
+  position: relative;
+}
+
+body .owl-nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 60px;
+}
+
+body .owl-nav .owl-prev span {
+  color: $white;
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+  padding: 5px 10px;
+  background: #0e0b0b9c;
+}
+
+
+body .owl-nav .owl-next span {
+  color: $white;
+  position: absolute;
+  bottom: 30%;
+  right: 15%;
+  padding: 5px 10px;
+  background: #0e0b0b9c;
+}
+
+.slider img {
+  width: 1248px;
+  height: 462px;
+  margin: 0 auto;
+}
+
+.main-flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 195px;
+}
+
+.breadcrumbs ul {
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  li {
+    padding-right: 10px;
+    :after {
+      content: '/';
+      display: inline-block;
+
+
+    }
+    //dont understand why not working about last child
+    //:last-child :after {
+    //  content: '';
+    //}
+
+
+    a {
+      text-decoration: underline;
+
+      letter-spacing: 0px;
+      line-height: 18px;
+      color: $dark-grey;
+    }
+
+  }
+}
+
+.breadcrumbs a.breadcrumbs-active {
+  text-decoration: none;
+
+
+}
+
+.catalog {
+  width: 18%;
+  color: $dark-grey;
+  padding-bottom: 100px;
+
+img {
+  float: right;
+}
+
+  h2 {
+    clear: both;
+    margin: 0;
+    text-align: center;
+    color: $darker-grey;
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-weight: 700;
+  }
+  a {
+    color: $dark-grey;
+  }
+  time {
+    font-style: italic;
+  }
+  p {
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-top: 10px;
+  }
+
+}
+
+.catalog-info-list {
+  list-style: none;
+  padding: 0 1%;
+  margin-bottom: 40%;
+}
+
+.catalog-info-list-active {
+  text-decoration: underline;
+}
+
+.equipment-list {
+  list-style-type: disc;
+  li a {
+    text-decoration: none!important;  //not working - find why later
+  }
+}
+.content {
+  width: 79%;
+  letter-spacing: 1px;
+  line-height: 22px;
+  font-weight: 400;
+
+}
+
+.content-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  :nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.content-galery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  width: 32%;
+  background-color: $light-grey;
+  color: $dark-grey;
+  margin-right: 1.3%;
+
+}
+
+.content-galery-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  p {
+    color: $darker-grey;
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.cart {
+  display: block;
+  width: 28px;
+  height: 21px;
+  background-image:url("../img/addtobasket_mini copy.png");
+}
+
+.pagination ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  li {
+    margin-right: 20px;
+    a {
+      letter-spacing: 8px;
+      line-height: 22px;
+      color: $dark-grey;
+
+    }
+  }
+ }
+.pagination .pagination-active {
+  font-weight: bold;
+  color: $darker-grey;
+}
+
+.content-info {
+  display: flex;
+  justify-content: space-between;
+  p {
+    width: 48%;
+  }
+}
+//main ends here
+
+footer {
+  font-size: 14px;
+  background-color: $dark-grey;
+  color: $white;
+}
+
+footer .wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  a {
+    color: $white;
+  }
+}
+
+.footer-nav ul {
+  list-style: none;
+  text-decoration: underline;
+}
+
+.company {
+  display: flex;
+  img {
+    width: 36px;
+    height: 38px;
+    margin-right: 8px;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 2s linear;
+
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color: #535353;
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 33%;
+  h2 {
+    font-size: 24px;
+    color: #535353;
+    font-weight: 700;
+    text-align: center;
+
+  }
+  label {
+    text-align: center;
+
+    display: block;
+  }
+  input {
+    width: 73%;
+    margin: 0 auto;
+
+    margin-top: 10px;
+
+    display: block;
+    //:invalid {
+    //  border: 1px solid red;
+    //}
+  }
+  textarea {
+    width: 73%;
+
+    margin: 0 auto;
+    margin-top: 10px;
+
+    display: block;
+  }
+  input[type="submit"] {
+    width: 128px;
+    height: 42px;
+    background-color: #777777;
+    font-size: 18px;
+    color: $whitefff;
+    font-weight: 700;
+    text-transform: uppercase;
+
+  }
+
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  right: -15px;
+  top: -30px;
+  color: $white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+//owl-carousel syles
+body .owl-carousel .owl-item img {
+  width: 1248px;
+  height: 462px;
+}
+
+//media styles
+
+//make more media later
+
+@media (max-width: 1248px) {
+  .slider img {
+    display: none;
+  }
+  body .owl-nav {
+    display: none;
+  }
+  body .owl-carousel .owl-item img {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .wrapper {
+    width: 800px;
+  }
+}
+
+
+
